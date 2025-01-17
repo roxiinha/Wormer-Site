@@ -15,9 +15,9 @@ body {
 
 /* Estilo do cabeçalho */
 header {
-    background-color: whitesmoke; /* Cinza escuro para o cabeçalho */
+    background-color: whitesmoke;
     color: #e0e0e0;
-    padding: 1rem 0;
+    padding-top: 0px;
 }
 
 .navbar {
@@ -25,13 +25,13 @@ header {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 0 1rem;
 }
 
 .navbar .logo {
     max-width: 400px;
     height: 200px;
+    margin-left: 6px;
 }
 
 .nav-links {
