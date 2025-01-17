@@ -1,9 +1,15 @@
-/* Reset básico */
 body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
+.manrope{
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+  }
 
 body {
     font-family: Arial, sans-serif;
@@ -13,11 +19,11 @@ body {
     margin: 0;
 }
 
-/* Estilo do cabeçalho */
 header {
     background-color: whitesmoke;
     color: #e0e0e0;
     padding-top: 0px;
+    height: 150px;
 }
 
 .navbar {
@@ -26,12 +32,20 @@ header {
     align-items: center;
     max-width: 1200px;
     padding: 0 1rem;
+    position: relative; /* O contêiner pai deve ter posição relativa */
+}
+
+.logo {
+    position: absolute; /* A posição absoluta permite deslocar em relação ao pai */
+    top: 20px; /* Desloca 20px para baixo */
+    left: 20px; /* Desloca 20px para a esquerda */
+    max-width: 150px;
+    height: auto;
 }
 
 .navbar .logo {
-    max-width: 400px;
-    height: 200px;
-    margin-left: 6px;
+    max-width: 150px;
+    height: 95px;
 }
 
 .nav-links {
@@ -51,7 +65,6 @@ header {
     color: #9e9e9e; /* Cinza médio ao passar o mouse */
 }
 
-/* Estilo da seção de conteúdo */
 .content {
     text-align: center;
     padding: 2rem;
