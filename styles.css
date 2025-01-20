@@ -1,177 +1,187 @@
-.manrope{
-    font-family: "Manrope", serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
+.manrope {
+  font-family: "Manrope", serif;
+  font-optical-sizing: auto;
+  font-weight: 20px;
+  font-style: normal;
 }
 
 /* Resetando margens e padding para todos os elementos */
-body, h1, h2, h3, p, ul, li, a, section, main {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-align: center;
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+section,
+main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 /* Estilo geral do body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212; /* Preto suave para o fundo */
-    color: #e0e0e0; /* Cinza claro para o texto */
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Preto suave para o fundo */
+  color: #e0e0e0; /* Cinza claro para o texto */
+  line-height: 1.6;
 }
 
 /* Estilo do header */
 header {
-    background-color: whitesmoke;
-    color: black;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5rem;
+  background-color: whitesmoke;
+  color: black;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .logo {
-    max-width: 150px;
-    height: auto;
+  max-width: 150px;
+  height: auto;
 }
 
 /* Estilo da navegação */
 .nav-links {
-    display: flex;
-    gap: 2rem;
-    margin: 0;
+  display: none; /* Escondido por padrão */
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .nav-links li {
-    list-style: none;
+  margin: 5px 0;
 }
 
 .nav-links li a {
-    color: black;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s ease;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #9e9e9e; /* Cinza médio ao passar o mouse */
+  background-color: #f0f0f0;
 }
 
-/* Estilo do main */
-main {
-    text-align: center;
-    padding: 2rem;
+/* Ícone do menu */
+.menu-container {
+  position: relative;
 }
 
-/* Estilo das seções dentro do main */
-section {
-    margin-bottom: 2rem;
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+  user-select: none; /* Impede seleção */
 }
 
-/* Estilo do título h2 */
-h2 {
-    font-size: 2.5rem;
-    color: #e0e0e0; /* Texto em cinza claro */
-}
-
-/* Estilo do parágrafo p */
-p {
-    font-size: 1.2rem;
-    color: #e0e0e0;
-}
-
-/* Estilo da div para redes sociais */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-/* Estilo dos links das redes sociais */
-.social-links a {
-    color: #e0e0e0;
-    font-size: 2rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #9e9e9e;
+/* Quando o menu está visível */
+.nav-links.show {
+  display: block; /* Mostra o menu */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
+  .navbar {
+    flex-direction: column;
+  }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
-
 
 /*Estilos para os produtos*/
 .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Espaçamento entre os produtos */
-    padding: 20px;
-    max-width: 1200px; /* Define uma largura máxima para o container */
-    margin: 0 auto; /* Centraliza horizontalmente o container */
-    justify-content: center; /* Centraliza os produtos dentro do container */
-    box-sizing: border-box; /* Garante que padding seja considerado dentro da largura total */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaçamento entre os produtos */
+  padding: 20px;
+  max-width: 1200px; /* Define uma largura máxima para o container */
+  margin: 0 auto; /* Centraliza horizontalmente o container */
+  justify-content: center; /* Centraliza os produtos dentro do container */
+  box-sizing: border-box; /* Garante que padding seja considerado dentro da largura total */
 }
 
-        .product-card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 250px;
-            text-align: center;
-            padding: 10px;
-            background-color: #fff;
-        }
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+}
 
-        .product-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
 
-        .product-card h3 {
-            margin: 10px 0;
-            font-size: 18px;
-        }
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
 
-        .product-card p {
-            color: #666;
-            margin: 10px 0;
-        }
+.product-card p {
+  color: #666;
+  margin: 10px 0;
+}
 
-        .product-card button {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+.product-card button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-        .product-card button:hover {
-            background-color: #45a049;
-        }
+.product-card button:hover {
+  background-color: #45a049;
+}
+
+/* Estilo da div para redes sociais */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #e0e0e0;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #9e9e9e;
+}

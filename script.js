@@ -8,3 +8,12 @@ function enviarPedido(produto, preco) {
     assunto
   )}&body=${encodeURIComponent(corpo)}`
 }
+
+// Seleciona o ícone do menu e a lista de links
+const menuIcon = document.querySelector('.menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+// Adiciona o evento de clique ao ícone
+menuIcon.addEventListener('click', () => {
+  navLinks.classList.toggle('show'); // Alterna a classe 'show'
+});
