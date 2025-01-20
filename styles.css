@@ -88,6 +88,40 @@ header {
 
 /* Responsividade: Ajustes para telas pequenas */
 @media (max-width: 768px) {
+    /* Ajustando tamanho dos títulos */
+  h1 {
+    font-size: 1.5rem; /* Tamanho menor para h1 */
+    line-height: 1.4;  /* Melhor espaçamento entre linhas */
+  }
+
+  h2 {
+    font-size: 1.25rem; /* Ajuste de h2 */
+  }
+
+  h3 {
+    font-size: 1rem; /* Ajuste de h3 */
+  }
+
+    /* Ajuste de margem para textos */
+  .content {
+    padding: 15px;
+  }
+
+  .content p {
+    text-align: center;
+    padding: 15px; /* Reduz o espaçamento lateral */
+    font-size: 1px; /* Diminui o tamanho da fonte */
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+  }
+
+  /* Ajustando parágrafos */
+  p {
+    font-size: 0.9rem; /* Reduzindo o tamanho da fonte */
+    line-height: 1.5; /* Melhorando a legibilidade */
+    padding: 0 15px;  /* Adicionando espaço nas laterais */
+    text-align: justify; /* Justificando o texto */
+  }
+
   /* Exibe o ícone do menu no mobile */
   .menu-icon {
     display: block;
@@ -120,9 +154,27 @@ header {
   }
 }
 
+@media (max-width: 480px) {
+  .content p {
+    padding: 10px; /* Reduz ainda mais o espaçamento interno */
+    font-size: 0.8rem; /* Fonte menor para telas muito pequenas */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+  }
+}
+
 /* Estilos para o conteúdo principal */
 .content {
   padding: 20px;
+}
+
+/* Estilo geral para o parágrafo */
+.content p {
+  text-align: justify;
+  padding: 20px; /* Espaçamento interno uniforme */
+  margin: 0 auto; /* Centraliza o texto no contêiner */
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+  font-size: 1rem; /* Tamanho de fonte padrão */
+  max-width: 800px; /* Limita a largura máxima do texto */
 }
 
 /* Estilos para os títulos */
