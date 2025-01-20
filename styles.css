@@ -12,7 +12,6 @@ main {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: center;
 }
 
 /* Estilo geral do body */
@@ -21,6 +20,7 @@ body {
   background-color: #121212; /* Preto suave para o fundo */
   color: #e0e0e0; /* Cinza claro para o texto */
   line-height: 1.6;
+  text-align: center;
 }
 
 /* Estilo do header */
@@ -34,7 +34,7 @@ header {
   padding: 0 1.5rem;
 }
 
-/* Estilo da navbar */
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -44,13 +44,29 @@ header {
   margin: auto;
 }
 
+/* Contêiner para logo e ícone de menu */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 150px; /* Espaçamento entre o logotipo e o ícone */
+}
+
 /* Estilo do logo */
 .logo {
   max-width: 150px;
   height: auto;
 }
 
-/* Menu e Links */
+/* Ícone do menu */
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+  user-select: none; /* Impede seleção */
+  display: none; /* Esconde o ícone por padrão */
+}
+
+/* Links de navegação */
 .nav-links {
   display: flex;
   gap: 1rem;
@@ -70,50 +86,29 @@ header {
   background-color: #f0f0f0;
 }
 
-/* Estilo para o menu de navegação no mobile */
-.menu-container {
-  position: relative;
-}
-
-.menu-icon {
-  font-size: 2rem;
-  cursor: pointer;
-  color: black;
-  user-select: none; /* Impede seleção */
-  display: none; /* Escondido por padrão em telas grandes */
-}
-
-/* Quando o menu está visível */
-.nav-links.show {
-  display: block; /* Mostra o menu */
-  position: absolute;
-  top: 70px;
-  right: 10px;
-  background-color: whitesmoke;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width: auto;
-}
-
-/* Responsividade: Menu para telas pequenas */
+/* Responsividade: Ajustes para telas pequenas */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    display: none;
-    width: 100%;
-  }
-
+  /* Exibe o ícone do menu no mobile */
   .menu-icon {
-    display: block; /* Exibe o ícone no mobile */
+    display: block;
   }
 
+  /* Esconde os links de navegação inicialmente */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+  }
+
+  /* Mostra o menu quando ativo */
   .nav-links.show {
     display: flex;
   }
