@@ -104,12 +104,12 @@ header {
 
     /* Ajuste de margem para textos */
   .content {
-    padding: 15px;
+    padding: 10px;
   }
 
   .content p {
     text-align: center;
-    padding: 15px; /* Reduz o espaçamento lateral */
+    padding: 10px; /* Reduz o espaçamento lateral */
     font-size: 1px; /* Diminui o tamanho da fonte */
     line-height: 1.5; /* Ajusta o espaçamento entre linhas */
   }
@@ -154,13 +154,32 @@ header {
   }
 }
 
+/* Ajustes para dispositivos móveis (telas pequenas) */
 @media (max-width: 480px) {
   .content p {
-    padding: 10px; /* Reduz ainda mais o espaçamento interno */
-    font-size: 0.8rem; /* Fonte menor para telas muito pequenas */
-    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+    padding: 10px; /* Reduz o padding interno */
+    font-size: 14px; /* Aumenta o tamanho da fonte para melhor leitura */
+    line-height: 1.6; /* Espaçamento mais confortável entre linhas */
+    text-align: justify; /* Mantém o texto justificado */
+    margin: 0 auto; /* Remove margens desnecessárias */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Ajuste do tamanho do título */
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Tamanho do subtítulo */
+    margin-top: 20px;
+  }
+
+  header {
+    height: auto; /* Ajusta dinamicamente a altura */
+    padding: 15px; /* Menor padding para economizar espaço */
   }
 }
+
 
 /* Estilos para o conteúdo principal */
 .content {
@@ -172,9 +191,9 @@ header {
   text-align: justify;
   padding: 20px; /* Espaçamento interno uniforme */
   margin: 0 auto; /* Centraliza o texto no contêiner */
-  line-height: 1.6; /* Melhor espaçamento entre linhas */
-  font-size: 1rem; /* Tamanho de fonte padrão */
-  max-width: 800px; /* Limita a largura máxima do texto */
+  line-height: 1.4; /* Melhor espaçamento entre linhas */
+  font-size: 15px; /* Tamanho de fonte padrão */
+  max-width: 1200px; /* Limita a largura máxima do texto */
 }
 
 /* Estilos para os títulos */
@@ -190,6 +209,7 @@ h1 {
   font-weight: 400;
   color: #fff;
   text-align: center;
+  font-size: 30px;
 }
 
 /* Estilos para os produtos */
