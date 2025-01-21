@@ -9,8 +9,17 @@ function enviarPedido(produto, preco) {
   )}&body=${encodeURIComponent(corpo)}`
 }
 
-document.querySelector(".menu-icon").addEventListener("click", () => {
+/*document.querySelector(".menu-icon").addEventListener("click", () => {
   const navLinks = document.querySelector(".nav-links")
   navLinks.classList.toggle("show")
-})
+})*/
+document.querySelector(".menu-icon").addEventListener("click", () => {
+  const menuIcon = document.querySelector(".menu-icon")
+  const navLinks = document.querySelector(".nav-links")
 
+  navLinks.classList.toggle("show")
+  menuIcon.classList.toggle("active")
+
+  // Altera o conteúdo do ícone
+  menuIcon.textContent = menuIcon.classList.contains("active") ? "✖" : "☰"
+})

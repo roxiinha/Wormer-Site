@@ -138,8 +138,6 @@ header {
     padding: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     flex-direction: column;
-    gap: 10px;
-    width: auto;
   }
 
   /* Mostra o menu quando ativo */
@@ -152,6 +150,13 @@ header {
     text-align: left;
     width: 100%;
   }
+
+  .menu-icon.active {
+  content: "✖";
+  font-size: 2rem;
+  color: black; /* Opcional, muda a cor */
+  }
+
 }
 
 /* Ajustes para dispositivos móveis (telas pequenas) */
@@ -307,3 +312,4 @@ section p {
 #social-contact .social-links a {
   font-size: 3rem;
 }
+
