@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Login Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Fundo preto */
+            font-family: "Courier New", Courier, monospace; /* Fonte estilo terminal */
+            color: #01030c; /* Verde hacker */
+        }
+
+        .login-container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            background: linear-gradient(145deg, gray, gray);
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .password-field {
+            width: calc(100% - 20px); /* Ajusta o campo para se alinhar melhor */
+            padding: 10px;
+            margin: 20px auto; /* Centraliza verticalmente */
+            border: none;
+            border-radius: 5px;
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Texto branco para ser visível */
+            text-align: center;
+            font-size: 18px;
+            display: block; /* Centraliza horizontalmente como bloco */
+        }
+
+        .submit-button {
+            background-color: whitesmoke; /* Verde escuro */
+            color: black; /* Verde hacker */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-family: initial;
+        }
+
+        .submit-button:hover {
+            background-color: #535663a1;
+        }
+
+        .password-label {
+            font-size: 18px;
+            margin-top: 10px;
+            color: black;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="./img/wormer fundo preto.png" alt="Logo">
+        </div>
+        <input type="password" id="password" class="password-field" placeholder="Introduza a password">
+        <button class="submit-button" onclick="validatePassword()">SUBMIT</button>
+        <div id="message" class="message"></div>
+        <div class="password-label"></div>
+    </div>
+
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const message = document.getElementById('message');
+
+            if (password === "PNWormer") {
+                message.textContent = "Acesso permitido!";
+                message.style.color = "#00ff00";
+                setTimeout(() => {
+                    window.location.href = "index.html"; // Redireciona para sua página "Início"
+                }, 1000); // Exibe a mensagem antes de redirecionar
+            } else {
+                message.textContent = "Acesso negado!";
+                message.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
