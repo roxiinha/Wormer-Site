@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "7iniciarSite.html" }
+    { "source": "/", "destination": "index.html", "permanent": true }
   ]
 }
