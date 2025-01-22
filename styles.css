@@ -131,24 +131,27 @@ header {
   .nav-links {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 50px;
     right: 10px;
     background-color: whitesmoke;
     border-radius: 5px;
-    padding: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     flex-direction: column;
+    z-index: 1000;
   }
 
   /* Mostra o menu quando ativo */
   .nav-links.show {
-    display: flex;
+    display: block;
+    margin-top: 50px;
   }
 
   .nav-links li a {
-    padding: 15px;
+    padding: 10px 15px;
     text-align: left;
     width: 100%;
+    display: block;
+    text-decoration: none;
   }
 
   .menu-icon.active {
@@ -188,17 +191,6 @@ header {
 .content {
   text-align: center;
   padding: 20px;
-}
-
-/* Estilo geral para o parágrafo */
-.content p {
-  text-align: justify;
-  padding: 20px; /* Espaçamento interno uniforme */
-  margin: 0 auto; /* Centraliza o texto no contêiner */
-  line-height: 1; /* Melhor espaçamento entre linhas */
-  font-size: 15px; /* Tamanho de fonte padrão */
-  max-width: 1200px; /* Limita a largura máxima do texto */
-  color: #e0e0e0;
 }
 
 /* Estilos para os títulos */
@@ -257,6 +249,7 @@ h1 {
   color: #666;
   margin-bottom: 15px;
   text-align: center;
+  font-size: 16px;
 }
 
 .product-card button {
