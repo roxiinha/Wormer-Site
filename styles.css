@@ -88,10 +88,10 @@ header {
 
 /* Responsividade: Ajustes para telas pequenas */
 @media (max-width: 768px) {
-    /* Ajustando tamanho dos títulos */
+  /* Ajustando tamanho dos títulos */
   h1 {
     font-size: 1.5rem; /* Tamanho menor para h1 */
-    line-height: 1.4;  /* Melhor espaçamento entre linhas */
+    line-height: 1.4; /* Melhor espaçamento entre linhas */
   }
 
   h2 {
@@ -102,7 +102,7 @@ header {
     font-size: 1rem; /* Ajuste de h3 */
   }
 
-    /* Ajuste de margem para textos */
+  /* Ajuste de margem para textos */
   .content {
     padding: 10px;
   }
@@ -118,7 +118,7 @@ header {
   p {
     font-size: 0.9rem; /* Reduzindo o tamanho da fonte */
     line-height: 1.5; /* Melhorando a legibilidade */
-    padding: 0 15px;  /* Adicionando espaço nas laterais */
+    padding: 0 15px; /* Adicionando espaço nas laterais */
     text-align: justify; /* Justificando o texto */
   }
 
@@ -152,11 +152,10 @@ header {
   }
 
   .menu-icon.active {
-  content: "✖";
-  font-size: 2rem;
-  color: black; /* Opcional, muda a cor */
+    content: "✖";
+    font-size: 2rem;
+    color: black; /* Opcional, muda a cor */
   }
-
 }
 
 /* Ajustes para dispositivos móveis (telas pequenas) */
@@ -185,9 +184,9 @@ header {
   }
 }
 
-
 /* Estilos para o conteúdo principal */
 .content {
+  text-align: center;
   padding: 20px;
 }
 
@@ -196,9 +195,10 @@ header {
   text-align: justify;
   padding: 20px; /* Espaçamento interno uniforme */
   margin: 0 auto; /* Centraliza o texto no contêiner */
-  line-height: 1.4; /* Melhor espaçamento entre linhas */
+  line-height: 1; /* Melhor espaçamento entre linhas */
   font-size: 15px; /* Tamanho de fonte padrão */
   max-width: 1200px; /* Limita a largura máxima do texto */
+  color: #e0e0e0;
 }
 
 /* Estilos para os títulos */
@@ -207,10 +207,11 @@ h1 {
   font-weight: 500;
   margin: 20px 0;
   color: #fff;
+  margin-bottom: 30px;
 }
 
 .manrope {
-  font-family: 'Manrope', serif;
+  font-family: "Manrope", serif;
   font-weight: 400;
   color: #fff;
   text-align: center;
@@ -219,7 +220,8 @@ h1 {
 
 /* Estilos para os produtos */
 .product-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   flex-wrap: wrap;
   gap: 20px; /* Espaçamento entre os produtos */
   padding: 20px;
@@ -231,42 +233,53 @@ h1 {
 
 /* Estilo individual dos cards de produto */
 .product-card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 250px;
+  box-shadow: 0 4px 15px rgba(191, 191, 191);
+  border-radius: 10px;
   text-align: center;
-  padding: 10px;
-  background-color: #fff;
+  padding: 15px;
+  background-color: rgba(239, 239, 240);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card img {
   width: 100%;
-  height: auto;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .product-card h3 {
-  margin: 10px 0;
   font-size: 18px;
+  margin-bottom: 10px;
+  color: #717776;
 }
 
 .product-card p {
   color: #666;
-  margin: 10px 0;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .product-card button {
-  padding: 10px;
-  background-color: #4caf50;
+  padding: 10px 20px;
+  background-color: #333333;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  font-family: 'Courier New', monospace;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(103, 109, 108, 0.8); /* Realce ao passar o mouse */
 }
 
 .product-card button:hover {
-  background-color: #45a049;
+  background-color: #bfc3c4; /* Azul claro */
+  color: #000;
+  transform: scale(o.50);
 }
 
 /* Estilo para o rodapé de redes sociais */
@@ -312,4 +325,3 @@ section p {
 #social-contact .social-links a {
   font-size: 3rem;
 }
-
