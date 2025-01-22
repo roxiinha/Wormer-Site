@@ -270,7 +270,7 @@ h1 {
 }
 
 .product-card button:hover {
-  background-color: #bfc3c4; /* Azul claro */
+  background-color: #bfc3c4;
   color: #000;
   transform: scale(o.50);
 }
@@ -317,4 +317,36 @@ section p {
 
 #social-contact .social-links a {
   font-size: 3rem;
+}
+
+.about-preview {
+  text-align: center;
+  padding: 20px;
+  background-color: #121212;
+}
+
+.about-preview h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-preview p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn-learn-more {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-learn-more:hover {
+  background-color: #bfc3c4;
 }
