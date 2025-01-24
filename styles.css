@@ -25,7 +25,7 @@ body {
 
 /* Estilo do header */
 header {
-  background-color: whitesmoke;
+  background-color: rgb(158, 154, 154);
   color: black;
   height: 150px;
   display: flex;
