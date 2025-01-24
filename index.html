@@ -12,9 +12,9 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #000; /* Fundo preto */
-            font-family: "Courier New", Courier, monospace; /* Fonte estilo terminal */
-            color: #01030c; /* Verde hacker */
+            background-color: #000;
+            font-family: "Courier New", Courier, monospace;
+            color: #01030c;
         }
 
         .login-container {
@@ -36,21 +36,21 @@
         }
 
         .password-field {
-            width: calc(100% - 20px); /* Ajusta o campo para se alinhar melhor */
+            width: calc(100% - 20px);
             padding: 10px;
-            margin: 20px auto; /* Centraliza verticalmente */
+            margin: 20px auto;
             border: none;
             border-radius: 5px;
-            background-color: #000; /* Fundo preto */
-            color: #fff; /* Texto branco para ser visível */
+            background-color: #000;
+            color: #fff;
             text-align: center;
             font-size: 18px;
-            display: block; /* Centraliza horizontalmente como bloco */
+            display: block;
         }
 
         .submit-button {
-            background-color: whitesmoke; /* Verde escuro */
-            color: black; /* Verde hacker */
+            background-color: whitesmoke;
+            color: black;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
@@ -88,6 +88,7 @@
     </div>
 
     <script>
+        // Função de validação
         function validatePassword() {
             const password = document.getElementById('password').value;
             const message = document.getElementById('message');
@@ -97,12 +98,20 @@
                 message.style.color = "#00ff00";
                 setTimeout(() => {
                     window.location.href = "index2.html"; // Redireciona para sua página "Início"
-                }, 1000); // Exibe a mensagem antes de redirecionar
+                }, 1000);
             } else {
                 message.textContent = "Acesso negado!";
                 message.style.color = "red";
             }
         }
+
+        // Detectar tecla Enter no campo de senha
+        const passwordField = document.getElementById('password');
+        passwordField.addEventListener('keydown', (event) => {
+            if (event.key === "Enter") {
+                validatePassword(); // Executa a validação
+            }
+        });
     </script>
 </body>
 </html>
