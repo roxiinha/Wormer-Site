@@ -270,7 +270,7 @@ h1 {
 }
 
 .product-card button:hover {
-  background-color: #bfc3c4;
+  background-color: #aeb3b4;
   color: #000;
   transform: scale(o.50);
 }
@@ -351,3 +351,49 @@ section p {
   background-color: #bfc3c4;
 }
 
+/* Estilos para a página de detalhes do produto */
+.produto-detalhes {
+  padding: 20px;
+  text-align: center;
+}
+
+.detalhes-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.imagens-produto img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.imagens-adicionais {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.imagens-adicionais img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.informacoes-produto {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.informacoes-produto button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
