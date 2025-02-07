@@ -159,6 +159,59 @@ header {
     font-size: 2rem;
     color: black; /* Opcional, muda a cor */
   }
+
+    .produto-detalhes {
+    padding: 10px;
+  }
+
+  .detalhes-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .imagens-produto img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .imagens-adicionais {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .imagens-adicionais img {
+    width: 70px;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .informacoes-produto {
+    width: 100%;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .informacoes-produto p {
+    font-size: 1rem;
+  }
+
+  .informacoes-produto button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 
 /* Ajustes para dispositivos móveis (telas pequenas) */
@@ -185,27 +238,6 @@ header {
     height: auto; /* Ajusta dinamicamente a altura */
     padding: 15px; /* Menor padding para economizar espaço */
   }
-
-  .produto-detalhes {
-        padding: 10px;
-      }
-
-      .detalhes-container {
-        width: 95%;
-        padding: 10px;
-      }
-
-      .imagens-adicionais img {
-        width: 50px;
-      }
-
-      .informacoes-produto p {
-        font-size: 0.9rem;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
 }
 
 /* Estilos para o conteúdo principal */
