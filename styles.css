@@ -185,6 +185,27 @@ header {
     height: auto; /* Ajusta dinamicamente a altura */
     padding: 15px; /* Menor padding para economizar espaço */
   }
+
+  .produto-detalhes {
+        padding: 10px;
+      }
+
+      .detalhes-container {
+        width: 95%;
+        padding: 10px;
+      }
+
+      .imagens-adicionais img {
+        width: 50px;
+      }
+
+      .informacoes-produto p {
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
 }
 
 /* Estilos para o conteúdo principal */
