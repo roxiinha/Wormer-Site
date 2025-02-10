@@ -89,35 +89,19 @@
     </div>
 
     <script>
-        async function validatePassword() {
+        // Função de validação
+        function validatePassword() {
             const password = document.getElementById('password').value;
             const message = document.getElementById('message');
 
-            try {
-                // Envia a senha para o backend (PHP)
-                const response = await fetch('validate.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ password: password })
-                });
-
-                const data = await response.json();
-
-                if (data.success) {
-                    message.textContent = "Acesso permitido!";
-                    message.style.color = "#00ff00";
-                    setTimeout(() => {
-                        window.location.href = "index2.html"; // Redireciona para a página "Início"
-                    }, 1000);
-                } else {
-                    message.textContent = "Acesso negado!";
-                    message.style.color = "red";
-                }
-            } catch (error) {
-                console.error("Erro ao validar senha:", error);
-                message.textContent = "Erro ao validar senha.";
+            if (password === "PNWormer") {
+                message.textContent = "Acesso permitido!";
+                message.style.color = "#00ff00";
+                setTimeout(() => {
+                    window.location.href = "index2.html"; // Redireciona para sua página "Início"
+                }, 1000);
+            } else {
+                message.textContent = "Acesso negado!";
                 message.style.color = "red";
             }
         }
