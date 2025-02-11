@@ -1,12 +1,37 @@
 function enviarPedido(produto, preco) {
-  const email = "kwormer77@gmail.com" // Substitua pelo e-mail onde deseja receber os pedidos
-  const assunto = `Pedido de Compra - ${produto}`
-  const corpo = `Olá, patrão!\n\nGostaria de comprar o seguinte produto:\n\nProduto: ${produto}\nPreço: ${preco}\n\nInsira aqui o tamanho da roupa que você deseja (XS, S, M, L, XL, XXL): (tamanho da roupa)\n\nAqui está o meu MB Way para efetuar o pagamento: +351 968 918 942\n\nCaso você queira pagar de outra forma, tem que falar comigo.\n\nMorada: (insira aqui a sua morada)\n\nInsira o seu nome completo: (insira aqui o seu nome)\n\nInsira o nº de telemóvel que vai fazer o pagamento por MB Way: (nº de telemóvel do pagamento)\n\nMande também um print só para confirmação.\n\nObrigado.`
+  const email = "kwormer77@gmail.com" // Substitua pelo e-mail desejado
 
-  // Abrir o Gmail com o e-mail preenchido
-  window.location.href = `mailto:${email}?subject=${encodeURIComponent(
-    assunto
-  )}&body=${encodeURIComponent(corpo)}`
+  const assunto = `Pedido de Compra - ${produto}`
+
+  const corpo = `
+    Olá, patrão!
+
+    Gostaria de comprar o seguinte produto:
+
+    Produto: ${produto}
+    Preço: ${preco}
+
+    Insira aqui o tamanho da roupa que você deseja (XS, S, M, L, XL, XXL): [TAMANHO DA ROUPA]
+
+    Aqui está o meu MB Way para efetuar o pagamento: +351 968 918 942
+
+    Caso você queira pagar de outra forma, entre em contato comigo.
+
+    Morada: [INSIRA AQUI A SUA MORADA]
+
+    Insira o seu nome completo: [NOME COMPLETO]
+
+    Insira o nº de telemóvel que vai fazer o pagamento por MB Way: [Nº DE TELEMÓVEL]
+
+    Mande também um print apenas para confirmação.
+
+    Obrigado!
+  `
+
+  const assuntoCodificado = encodeURIComponent(assunto)
+  const corpoCodificado = encodeURIComponent(corpo)
+
+  window.location.href = `mailto:${email}?subject=${assuntoCodificado}&body=${corpoCodificado}`
 }
 
 document.querySelector(".menu-icon").addEventListener("click", () => {
