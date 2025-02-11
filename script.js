@@ -1,7 +1,7 @@
 function enviarPedido(produto, preco) {
-  const email = "kwormer77@gmail.com" // Substitua pelo e-mail desejado
+  const email = "kwormer77@gmail.com"; // Substitua pelo e-mail desejado
 
-  const assunto = `Pedido de Compra - ${produto}`
+  const assunto = `Pedido de Compra - ${produto}`;
 
   const corpo = `
     Olá, patrão!
@@ -26,37 +26,33 @@ function enviarPedido(produto, preco) {
     Mande também um print apenas para confirmação.
 
     Obrigado!
-  `
+  `;
 
-  const assuntoCodificado = encodeURIComponent(assunto)
-  const corpoCodificado = encodeURIComponent(corpo)
+  const assuntoCodificado = encodeURIComponent(assunto);
+  const corpoCodificado = encodeURIComponent(corpo);
 
-  window.location.href = `mailto:${email}?subject=${assuntoCodificado}&body=${corpoCodificado}`
+  window.location.href = `mailto:${email}?subject=${assuntoCodificado}&body=${corpoCodificado}`;
 }
 
 // Menu responsivo
 document.querySelector(".menu-icon").addEventListener("click", () => {
-  const menuIcon = document.querySelector(".menu-icon")
-  const navLinks = document.querySelector(".nav-links")
+  const menuIcon = document.querySelector(".menu-icon");
+  const navLinks = document.querySelector(".nav-links");
 
-  navLinks.classList.toggle("show")
-  menuIcon.classList.toggle("active")
+  navLinks.classList.toggle("show");
+  menuIcon.classList.toggle("active");
 
   // Altera o conteúdo do ícone
-  menuIcon.textContent = menuIcon.classList.contains("active") ? "✖" : "☰"
-})
+  menuIcon.textContent = menuIcon.classList.contains("active") ? "✖" : "☰";
+});
 
 // Captura os parâmetros da URL
-const urlParams = new URLSearchParams(window.location.search)
-const produto = urlParams.get("produto")
+const urlParams = new URLSearchParams(window.location.search);
+const produto = urlParams.get("produto");
 
 // Define as informações com base no parâmetro 'produto'
 if (produto === "calca-levis") {
-  document.querySelector(".produto-detalhes h1").textContent =
-    "Detalhes da Calça Levi's"
-  document.querySelector(".informacoes-produto p").textContent =
-    "Descrição: Calça Levi's de alta qualidade, ideal para qualquer ocasião."
-  document
-    .querySelector(".informacoes-produto button")
-    .setAttribute("onclick", "enviarPedido(\"Calça Levi's\", '43€')")
+  document.querySelector(".produto-detalhes h1").textContent = "Detalhes da Calça Levi's";
+  document.querySelector(".informacoes-produto p").textContent = "Descrição: Calça Levi's de alta qualidade, ideal para qualquer ocasião.";
+  document.querySelector(".informacoes-produto button").setAttribute("onclick", "enviarPedido(\"Calça Levi's\", '43€')");
 }
