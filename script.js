@@ -34,6 +34,7 @@ function enviarPedido(produto, preco) {
   window.location.href = `mailto:${email}?subject=${assuntoCodificado}&body=${corpoCodificado}`
 }
 
+// Menu responsivo
 document.querySelector(".menu-icon").addEventListener("click", () => {
   const menuIcon = document.querySelector(".menu-icon")
   const navLinks = document.querySelector(".nav-links")
@@ -57,5 +58,5 @@ if (produto === "calca-levis") {
     "Descrição: Calça Levi's de alta qualidade, ideal para qualquer ocasião."
   document
     .querySelector(".informacoes-produto button")
-    .setAttribute("onclick", "enviarPedido('Calça Levi's', '43€')")
+    .setAttribute("onclick", "enviarPedido(\"Calça Levi's\", '43€')")
 }
