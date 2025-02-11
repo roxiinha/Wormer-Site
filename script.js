@@ -21,14 +21,17 @@ document.querySelector(".menu-icon").addEventListener("click", () => {
 })
 
 // script.js (Exemplo)
-const urlParams = new URLSearchParams(window.location.search);
-const produto = urlParams.get('produto');
+const urlParams = new URLSearchParams(window.location.search)
+const produto = urlParams.get("produto")
 
 // Aqui você pode definir as informações com base no parâmetro 'produto'
-if (produto === 'calca-levis') {
-  document.querySelector('.produto-detalhes h1').textContent = 'Detalhes da Calça Levi\'s';
-  document.querySelector('.informacoes-produto p').textContent = 'Descrição: Calça Levi\'s de alta qualidade, ideal para qualquer ocasião.';
-  document.querySelector('.informacoes-produto button').setAttribute('onclick', "enviarPedido('Calça Levi\'s', '43 €')");
+if (produto === "calca-levis") {
+  document.querySelector(".produto-detalhes h1").textContent =
+    "Detalhes da Calça Levi's"
+  document.querySelector(".informacoes-produto p").textContent =
+    "Descrição: Calça Levi's de alta qualidade, ideal para qualquer ocasião."
+  document
+    .querySelector(".informacoes-produto button")
+    .setAttribute("onclick", "enviarPedido('Calça Levi's', '43 €')")
   // Adicione as imagens adicionais conforme necessário
 }
-
