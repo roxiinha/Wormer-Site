@@ -56,3 +56,24 @@ if (produto === "calca-levis") {
   document.querySelector(".informacoes-produto p").textContent = "Descrição: Calça Levi's de alta qualidade, ideal para qualquer ocasião.";
   document.querySelector(".informacoes-produto button").setAttribute("onclick", "enviarPedido(\"Calça Levi's\", '43€')");
 }
+
+// Lista de imagens e links dos produtos
+      const produtos = [
+        { img: "./assets/img/merch.JPG", link: "./pages/produto-detalhes.html?produto=calca-levis" },
+        { img: "./assets/img/produto2.jpg", link: "./pages/produto-detalhes.html?produto=casaco-exclusivo" },
+        { img: "./assets/img/produto3.jpg", link: "./pages/produto-detalhes.html?produto=camisa-verde" }
+      ];
+
+      let indiceAtual = 0;
+
+      function trocarImagem(direcao) {
+        indiceAtual += direcao;
+        if (indiceAtual < 0) {
+          indiceAtual = produtos.length - 1;
+        } else if (indiceAtual >= produtos.length) {
+          indiceAtual = 0;
+        }
+
+        document.getElementById("product-image").src = produtos[indiceAtual].img;
+        document.getElementById("product-link").href = produtos[indiceAtual].link;
+      }
